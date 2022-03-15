@@ -12,9 +12,7 @@
 <body>
     <div id="box">
 
-        <figure>
-            <img src="imagens/panic-1393619.png" alt="buuu">
-        </figure>
+        <img src="imagens/panic-1393619.png" alt="buuu">
     </div>
 
     <script>
@@ -26,17 +24,23 @@
             if (keyName === 'ArrowDown') {
                 boxTop += 10
                 document.getElementById("box").style.top = boxTop + "px";
-            } else if (keyName === 'ArrowUp') {
+            }
+            if (keyName === 'ArrowUp') {
                 boxTop -= 10
                 document.getElementById("box").style.top = boxTop + "px";
-            } else if (keyName === 'ArrowRight') {
-                boxTop += 10
-                document.getElementById("box").style.left = boxTop + "px";
-            } else if (keyName === 'ArrowLeft') {
-                boxTop -= 10
-                document.getElementById("box").style.left = boxTop + "px";
             }
+            if (keyName === 'ArrowRight') {
+                boxLeft += 10
+                document.getElementById("box").style.left = boxLeft + "px";
+            }
+            if (keyName === 'ArrowLeft') {
+                boxLeft -= 10
+                document.getElementById("box").style.left = boxLeft + "px";
+            }
+
             console.log('keydown event\n\n' + 'key: ' + keyName);
+            console.log(boxTop)
+            console.log(boxLeft)
         });
     </script>
 
